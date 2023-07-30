@@ -1,12 +1,10 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-	FragTrap Dan("Dan");
+	DiamondTrap Dan("Dan");
 
 	Dan.attack("enemy");
-	// Dan.takeDamage(10);
-	// Dan.beRepaired(500);
-	Dan.highFivesGuys();
+
 	return (0);
 }

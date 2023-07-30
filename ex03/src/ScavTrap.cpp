@@ -13,6 +13,10 @@ ScavTrap::ScavTrap(std::string name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+
+	this->_hp = 100;
+	this->_ep = 50;
+	this->_ad = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scavtrap) {

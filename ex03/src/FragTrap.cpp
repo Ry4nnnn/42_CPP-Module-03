@@ -13,6 +13,10 @@ FragTrap::FragTrap(std::string name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
+
+	this->_hp = 100;
+	this->_ep = 100;
+	this->_ad = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &fragtrap) {

@@ -8,5 +8,18 @@ DiamondTrap::DiamondTrap() {
 }
 
 DiamondTrap::DiamondTrap(std::string name) {
-	cout << "[DiamondTrap] " << name << " : contructor called." << endl;
+	cout << "[DiamondTrap] " << name << " : contructor function called." << endl;
+}
+
+
+DiamondTrap::~DiamondTrap() {
+	cout << "[DiamondTrap] " << _name << " : destructor function called." << endl;
+}
+
+void	DiamondTrap::attack(const std::string &target) {
+	this->ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI() {
+	cout << "[DiamondTrap] name : " << _name << "[ClapTrap] name : " << ClapTrap::_name << endl;
 }
