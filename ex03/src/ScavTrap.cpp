@@ -8,7 +8,7 @@ ScavTrap::ScavTrap() {
 }
 
 ScavTrap::ScavTrap(std::string name) {
-	cout << "[ScavTrap] " << _name << " : contructor function called." << endl;
+	cout << "[ScavTrap] " << name << " : contructor function called." << endl;
 	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;

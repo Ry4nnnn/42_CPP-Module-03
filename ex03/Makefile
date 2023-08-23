@@ -1,5 +1,5 @@
 
-NAME = fragtrap
+NAME = diamondtrap
 
 CPP = c++
 
