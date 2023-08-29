@@ -2,24 +2,11 @@
 
 int main()
 {
-	std::string en = "enemy";
-	ClapTrap C("Clap");
-	ScavTrap S("Scav");
-	FragTrap F("Frag");
-	DiamondTrap D("Diam");
-
-	S.attack("Frag");
-	S.attack("Diam");
-	D.takeDamage(30);
-	D.attack(en);
-	D.beRepaired(2);
-	F.takeDamage(20);
-	F.beRepaired(5);
-	C.attack("Scav");
-	C.beRepaired(5);
-	F.attack("Scav");
-	S.takeDamage(30);
-	S.beRepaired(5);
-	D.whoAmI();
-	return (0);
+	DiamondTrap diamond("diam");
+	
+	diamond.beRepaired(10);
+	diamond.attack("enemy");
+	diamond.guardGate();
+	diamond.takeDamage(5);
+	diamond.whoAmI();
 }

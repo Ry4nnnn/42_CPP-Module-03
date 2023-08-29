@@ -11,11 +11,7 @@ class FragTrap : virtual public ClapTrap {
 		const FragTrap &operator=(const FragTrap &scavtrap);
 		~FragTrap();
 		void	highFivesGuys(void);
-	
-	protected:
-		int _hp;
-		int _ep;
-		int _ad;
+
 };
 
 #endif

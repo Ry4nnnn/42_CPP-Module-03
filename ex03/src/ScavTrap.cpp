@@ -4,28 +4,28 @@ using std::cout;
 using std::endl;
 
 ScavTrap::ScavTrap() {
-	cout << "[ScavTrap] default contructor function called." << endl;
+	cout << "ScavTrap constructor called." << endl;
+	this->_name = "undefined";
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) {
-	cout << "[ScavTrap] " << name << " : contructor function called." << endl;
+	cout << "ScavTrap string constructor called." << endl;
 	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-
-	this->_hp = 100;
-	this->_ep = 50;
-	this->_ad = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scavtrap) {
-	cout << "[ScavTrap] " << _name << " : copy contructor function called." << endl;
+	cout << "ScavTrap copy constructor called." << endl;
 	*this = scavtrap;
 }
 
 const ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap) {
-	cout << "[ScavTrap] " << _name << " : copy assignment operator function called." << endl;
+	cout << "ScavTrap copy assignment operator called." << endl;
 	this->_name = scavtrap._name;
 	this->_energyPoints = scavtrap._energyPoints;
 	this->_hitPoints = scavtrap._hitPoints;
@@ -34,7 +34,7 @@ const ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap) {
 }
 
 ScavTrap::~ScavTrap() {
-	cout << "[ScavTrap] " << _name << " : Destructor function called." << endl;
+	cout << "ScavTrap destructor called." << endl;
 }
 
 void ScavTrap::attack(const std::string &target) {

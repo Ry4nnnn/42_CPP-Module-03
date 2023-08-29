@@ -4,28 +4,28 @@ using std::cout;
 using std::endl;
 
 FragTrap::FragTrap() {
-	cout << "[FragTrap] default constructor function called." << endl;
+	cout << "FragTrap constructor called." << endl;
+	this->_name = "undefined";
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 }
 
 FragTrap::FragTrap(std::string name) {
-	cout << "[FragTrap] " << name << " : contructor function called." << endl;
+	cout << "FragTrap string constructor called." << endl;
 	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
-
-	this->_hp = 100;
-	this->_ep = 100;
-	this->_ad = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &fragtrap) {
-	cout << "[FragTrap] " << _name << " : copy contructor function called." << endl;
+	cout << "FragTrap copy constructor called." << endl;
 	*this = fragtrap;
 }
 
 const FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
-	cout << "[FragTrap] " << _name << " : copy assignment operator called." << endl;
+	cout << "FragTrap copy assignment operator called." << endl;
 	this->_name = fragtrap._name;
 	this->_hitPoints = fragtrap._hitPoints;
 	this->_energyPoints = fragtrap._energyPoints;
@@ -34,7 +34,7 @@ const FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
 }
 
 FragTrap::~FragTrap() {
-	cout << "[FragTrap] " << _name << " : Destructor function called." << endl;
+	cout << "FragTrap destructor called." << endl;
 }
 
 void	FragTrap::highFivesGuys() {

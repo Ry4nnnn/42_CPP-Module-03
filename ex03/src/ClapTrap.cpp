@@ -6,7 +6,7 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:02:02 by welim             #+#    #+#             */
-/*   Updated: 2023/07/31 16:18:33 by welim            ###   ########.fr       */
+/*   Updated: 2023/08/29 16:09:50 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,28 @@ using std::cout;
 using std::endl;
 
 ClapTrap::ClapTrap() {
-	cout << "[ClapTrap] Default Contructor Function Called" << endl;
+	this->_name = "undefined";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+	cout << "ClapTrap constructor called." << endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	cout << "[ClapTrap] " << _name << " : Contructor Function Called" << endl;
+ClapTrap::ClapTrap(std::string name) {
+	this->_name = name;
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+	cout << "ClapTrap string constructor called" << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap) {
-	cout << "[ClapTrap] " << _name << " : Copy Contructor Function Called" << endl;
+	cout << "ClapTrap copy constructor called." << endl;
 	*this = claptrap;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
-	cout << "[ClapTrap] " << _name << " : Copy Assignment Contructor Function Called" << endl;
+	cout << "ClapTrap copy assignment operator called." << endl;
 	this->_name = claptrap._name;
 	this->_hitPoints = claptrap._hitPoints;
 	this->_energyPoints = claptrap._energyPoints;
@@ -38,7 +46,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 }
 
 ClapTrap::~ClapTrap() {
-	cout << "[ClapTrap] " << _name << " : Destructor Function Called" << endl;
+	cout << "ClapTrap destructor called." << endl;
 }
 
 void	ClapTrap::attack(const std::string &target) {
